@@ -8,11 +8,11 @@ const Main = () => {
     const [list, setList] = useState(data)
     const nav = useNavigate()
 
-    // useEffect(() => {
-    //     if (typeof document !== "undefined") {
-    //         setList(data.filter(item => item.date >= basDate && item.date <= endDate))
-    //     }
-    // }, [endDate, basDate])
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setList(data.filter(item => item.date >= basDate && item.date <= endDate))
+        }
+    }, [endDate, basDate])
 
     return (
         <>
