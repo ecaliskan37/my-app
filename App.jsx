@@ -1,17 +1,16 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Detail from './components/Detail'
-import Main from './components/Main'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Detail from './pages/Detail'
+import Main from './pages/Main'
 import React from 'react';
+import { render } from 'react-dom';
 
 export default function App() {
-
     return (
-        <BrowserRouter>
+        <Router>
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/detail/:id" element={<Detail />} />
             </Routes>
-        </BrowserRouter>
-    )
+        </Router>)
 
 }

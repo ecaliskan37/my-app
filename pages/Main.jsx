@@ -1,3 +1,4 @@
+
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from "react"
 import data from '../public/apartments.json'
@@ -9,7 +10,7 @@ const Main = () => {
     const nav = useNavigate()
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
+        if (typeof window !== "undefined" || typeof document !== "undefined") {
             setList(data.filter(item => item.date >= basDate && item.date <= endDate))
         }
     }, [endDate, basDate])

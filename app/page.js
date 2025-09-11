@@ -1,11 +1,13 @@
-'use client'
+
+"use client"
 import App from '../App'
+import React from "react";
 
 const Home = () => {
   return (
-    <div>
+    <React.StrictMode>
       <App />
-    </div>
+    </React.StrictMode>
   )
 }
 export default Home
