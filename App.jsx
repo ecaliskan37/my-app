@@ -7,8 +7,8 @@ import { render } from 'react-dom';
 export default function App() {
     return (
         <Router>
+            <Main />
             <Routes>
-                <Route path="/" element={<Main />} />
                 <Route path="/detail/:id" element={<Detail />} />
             </Routes>
         </Router>)
