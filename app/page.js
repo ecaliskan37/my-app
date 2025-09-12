@@ -5,9 +5,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <App />
   )
 }
 export default Home
