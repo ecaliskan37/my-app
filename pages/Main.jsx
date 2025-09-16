@@ -2,7 +2,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from "react"
 import data from '../public/apartments.json'
-import { useRouter } from 'next/router'
 
 const Main = () => {
     const [basDate, setBasDate] = useState("2025-07-22")
@@ -41,7 +40,7 @@ const Main = () => {
                 </div >
             </div >
             <div>
-                {list.map((apartment) => {
+                {data.map((apartment) => {
                     return <div key={apartment.id}
                         className="flex border rounded-lg shadow-lg justify-around p-4 m-4">
                         < div className="flex-shrink-0 mr-4" >
