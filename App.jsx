@@ -1,15 +1,13 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Route, Routes, useRoutes } from 'react-router-dom'
 import Detail from './pages/Detail'
 import Main from './pages/Main'
 import React from 'react';
 
 export default function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Main />} />
-                <Route path="/detail/:id" element={<Detail />} />
-            </Routes>
-        </Router>)
+    const routes = useRoutes([
+        { path: '/', element: <Main /> },
+        { path: '/detail/:id', element: <Detail /> }
+    ]);
 
+    return routes;
 }

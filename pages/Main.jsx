@@ -2,6 +2,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from "react"
 import data from '../public/apartments.json'
+import { useRouter } from 'next/router'
 
 const Main = () => {
     const [basDate, setBasDate] = useState("2025-07-22")
@@ -52,8 +53,7 @@ const Main = () => {
                             <p>${apartment.price} /Night </p>
                             <button
                                 className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-                                onClick={() => nav(`/detail/:${apartment.id}`)}
-                            >
+                                onClick={() => nav(`/detail/:${apartment.id}`)}>
                                 View Details</button>
                         </div>
                     </div >
